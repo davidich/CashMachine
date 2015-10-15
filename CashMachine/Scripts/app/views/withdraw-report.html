@@ -1,0 +1,22 @@
+﻿<div class="alert alert-success" role="alert">
+    <strong>Congratulations!</strong> You have successfully withdrawn your money. See details below.
+</div>
+
+<table class="table table-striped table-hover" ng-show="isLoaded">
+    <tr>
+        <th>Card #:</th>
+        <td>{{info.cardNumber | cardNumberFormatter}}</td>
+    </tr>
+    <tr>
+        <th>Date:</th>
+        <td>{{ info.date | date:'medium' }}</td>
+    </tr>
+    <tr>
+        <th>Withdrawal amount:</th>
+        <td>{{ info.requestedAmount | currency:"$":2 }}</td>
+    </tr>
+    <tr>
+        <th>Current balance:</th>
+        <td>{{ info.balance | currency:"$":2 }}</td>
+    </tr>
+</table>

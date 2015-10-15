@@ -1,0 +1,15 @@
+﻿<div class="withdrawal-block">
+    <form class="form-inline withdrawal-amount text-right">
+        <div class="form-group">
+            <label for="amount">Withdrawal amount:</label>
+            <input id="amount"
+                   type="text"
+                   class="form-control text-right"
+                   readonly="readonly"
+                   value="{{amount | currency:'$':2}}" />
+        </div>
+    </form>
+
+    <keyboard buffer="amount" min-length="1" max-length="9" is-locked="isKeyboardLocked" ok="proceed"></keyboard>
+</div>
+

@@ -1,0 +1,26 @@
+﻿<div ng-show="renderedKeyCnt == 10" class="ng-hide">
+    <div class="text-center keyboard-line">
+        <num-key value="1" position="left"></num-key>
+        <num-key value="2"></num-key>
+        <num-key value="3" position="right"></num-key>
+    </div>
+    <div class="text-center keyboard-line">
+        <num-key value="4" position="left"></num-key>
+        <num-key value="5"></num-key>
+        <num-key value="6" position="right"></num-key>
+    </div>
+    <div class="text-center keyboard-line">
+        <num-key value="7" position="left"></num-key>
+        <num-key value="8"></num-key>
+        <num-key value="9" position="right"></num-key>
+    </div>
+    <div class="text-center keyboard-line">
+        <div class="btn btn-danger btn-lg pull-left" ng-click="clearPress()" ng-disabled="isLocked">
+            Clear
+        </div>
+        <num-key value="0"></num-key>
+        <div class="btn btn-success btn-lg pull-right" ng-click="okPress()" ng-disabled="!canProceed() || isLocked" title="{{ canProceed() ? 'Click to proceed' : 'Value is not entered' }}">
+            OK
+        </div>
+    </div>
+</div>

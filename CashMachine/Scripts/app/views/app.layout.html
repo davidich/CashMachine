@@ -1,0 +1,45 @@
+﻿<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Cash Machine</a>
+        </div>
+        <button type="button" class="btn btn-default navbar-btn pull-right" ng-click="logout()">
+            <span>Exit</span>
+            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+        </button>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="list-group">
+                        <a ui-sref="app.balance" class="list-group-item" ui-sref-active="active">
+                            <h4 class="list-group-item-heading">
+                                <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                                Balance
+                            </h4>
+                            <p class="list-group-item-text">Click to see information about your account</p>
+                        </a>
+
+                        <a ui-sref="app.withdraw" class="list-group-item" ui-sref-active="active">
+                            <h4 class="list-group-item-heading">
+                                <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+                                Withdraw
+                            </h4>
+                            <p class="list-group-item-text">Click to withdraw money from your account</p>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="col-md-10" ui-view>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

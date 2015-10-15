@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <base href="/">
+    <title>Cash machine</title>
+
+    <!-- Bootstrap -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/angular-toaster.css" rel="stylesheet" />
+    <link href="~/Content/css/flipper.css" rel="stylesheet" />    
+    <link href="~/Content/css/main.css" rel="stylesheet" />
+</head>
+<body >
+    <div ui-view ng-cloak>
+
+    </div>
+    
+    <toaster-container toaster-options="{'close-button': true}"></toaster-container>
+
+    <!-- AngularJS + plugins-->
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-animate.js"></script>
+    <script src="~/Scripts/angular-ui-router.js"></script>
+    <script src="~/Scripts/angular-local-storage.js"></script>
+    <script src="~/Scripts/angular-toaster.js"></script>
+
+    <!-- App -->
+    <script src="~/Scripts/app/app.js"></script>
+    <script src="~/Scripts/app/controllers/loginCtrl.js"></script>
+    <script src="~/Scripts/app/controllers/appLayoutCtrl.js"></script>
+    <script src="~/Scripts/app/controllers/balanceCtrl.js"></script>    
+    <script src="~/Scripts/app/controllers/withdrawCtrl.js"></script>
+    <script src="~/Scripts/app/controllers/withdrawReportCtrl.js"></script>
+    <script src="~/Scripts/app/directives/flipper.js"></script>
+    <script src="~/Scripts/app/directives/keyboard.js"></script>
+    <script src="~/Scripts/app/directives/numKey.js"></script>
+    <script src="~/Scripts/app/filters/cardNumberFormatter.js"></script>
+    <script src="~/Scripts/app/services/authService.js"></script>
+    <script src="~/Scripts/app/services/httpInterceptor.js"></script>
+    <script src="~/Scripts/app/services/identity.js"></script>
+    <script src="~/Scripts/app/services/cardService.js"></script>
+</body>
+</html>

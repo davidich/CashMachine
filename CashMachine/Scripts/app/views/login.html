@@ -1,0 +1,23 @@
+﻿<div class="container login">
+    <div class="card-container">
+        <flipper flip-duration="800" timing-function="ease-in-out" ng-class="{flipped : cardSide != 'number' }">
+            <front-side class="card card-number" ng-class="{flipped : cardSide != 'number' }">
+                <label>Card number:</label>
+                <input class="text-center" type="text" readonly="readonly" value="{{cardNumber | cardNumberFormatter}}" placeholder="XXXX-XXXX-XXXX-XXX" />
+            </front-side>
+            <back-side class="card card-pin" ng-class="{flipped : cardSide != 'pin' }">
+                <div class="btn btn-default btn-xs card-back-button" ng-click="goBack()">
+                    <span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>
+                    <span>Back</span>
+                </div>
+                <div>
+                    <label>PIN:</label>
+                </div>
+                <input class="text-center" type="password" readonly="readonly" value="{{cardPin}}" placeholder="4 digit" />
+            </back-side>
+        </flipper>
+    </div>
+    <div>
+        <keyboard buffer="keyboardBuffer" min-length="inputLength" max-length="inputLength" is-locked="isKeyboardLocked" ok="proceed"></keyboard>
+    </div>
+</div>
